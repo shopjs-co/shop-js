@@ -7,9 +7,10 @@ exports.resizeImage = exports.formatCurrency = void 0;
 
 var resizeImage = function resizeImage(url, height, width) {
   if (!url) return;
+  var isShopify = /(cdn\.shopify\.com)/i.test(url);
   var resizedUrl = url;
 
-  if (url.test(/cdn.shopify.com/)) {
+  if (isShopify) {
     var extension = url.split('.').pop();
     var filePath = url.split(".".concat(extension))[0];
     resizedSrc = "".concat(filePath, "_").concat(width, "x").concat(height, ".").concat(extension);
