@@ -1,5 +1,5 @@
 import { gql } from '@apollo/client'
-import { CheckoutFragment } from 'graphql/checkout'
+import { CheckoutFragment } from './graphql/checkout'
 
 export const CHECKOUT_DISCOUNT_CODE_APPLY = gql`
   mutation checkoutDiscountCodeApply($checkoutId: ID!, $discountCode: String!){

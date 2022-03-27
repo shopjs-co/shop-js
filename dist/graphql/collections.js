@@ -7,7 +7,7 @@ exports.QUERY_COLLECTIONS = exports.QUERY_COLLECTION = void 0;
 
 var _client = require("@apollo/client");
 
-var _products = require("graphql/products");
+var _products = require("./graphql/products");
 
 var _templateObject, _templateObject2, _templateObject3;
 
