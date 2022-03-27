@@ -9,8 +9,6 @@ exports["default"] = void 0;
 
 var _react = _interopRequireWildcard(require("react"));
 
-var _useAlerts = _interopRequireDefault(require("../../hooks/useAlerts"));
-
 var _client = require("@apollo/client");
 
 var _ShopContext = _interopRequireDefault(require("../context/ShopContext"));
