@@ -1,5 +1,6 @@
 import React, { useContext } from 'react'
-import { useAlerts, useCheckout } from 'hooks'
+import useAlerts from '../../hooks/useAlerts'
+import useCheckout from '../../hooks/useCheckout'
 import PropTypes from 'prop-types'
 import { Button, CircularProgress } from '@mui/material';
 import ShopContext from '../../context/ShopContext'

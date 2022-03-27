@@ -9,7 +9,9 @@ exports["default"] = void 0;
 
 var _react = _interopRequireWildcard(require("react"));
 
-var _hooks = require("hooks");
+var _useAlerts2 = _interopRequireDefault(require("../../hooks/useAlerts"));
+
+var _useCheckout2 = _interopRequireDefault(require("../../hooks/useCheckout"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
@@ -48,7 +50,7 @@ var AddToCartButton = function AddToCartButton(_ref) {
       selectOptionsRef = _ref.selectOptionsRef,
       props = _objectWithoutProperties(_ref, _excluded);
 
-  var _useAlerts = (0, _hooks.useAlerts)(),
+  var _useAlerts = (0, _useAlerts2["default"])(),
       showAlertSuccess = _useAlerts.showAlertSuccess,
       showAlertWarning = _useAlerts.showAlertWarning,
       showAlertError = _useAlerts.showAlertError;
@@ -56,7 +58,7 @@ var AddToCartButton = function AddToCartButton(_ref) {
   var _useContext = (0, _react.useContext)(_ShopContext["default"]),
       toggleOpenCart = _useContext.toggleOpenCart;
 
-  var _useCheckout = (0, _hooks.useCheckout)(),
+  var _useCheckout = (0, _useCheckout2["default"])(),
       loading = _useCheckout.loading,
       checkoutLineItemsAdd = _useCheckout.checkoutLineItemsAdd;
 
