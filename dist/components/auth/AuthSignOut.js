@@ -9,11 +9,11 @@ var _react = require("react");
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
-var _useAlerts2 = _interopRequireDefault(require("../hooks/useAlerts"));
+var _useAlerts2 = _interopRequireDefault(require("../../hooks/useAlerts"));
 
-var _useAuth2 = _interopRequireDefault(require("../hooks/useAuth"));
+var _useAuth2 = _interopRequireDefault(require("../../hooks/useAuth"));
 
-var _ShopContext = _interopRequireDefault(require("../context/ShopContext"));
+var _ShopContext = _interopRequireDefault(require("../../context/ShopContext"));
 
 var _material = require("@mui/material");
 

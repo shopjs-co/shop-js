@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
-import useAlerts from '../hooks/useAlerts'
-import useAuth from '../hooks/useAuth'
+import useAlerts from '../../hooks/useAlerts'
+import useAuth from '../../hooks/useAuth'
 import { Button, Box, CircularProgress, TextField } from '@mui/material';
 import { AccountCircle, } from  '@mui/icons-material'
 

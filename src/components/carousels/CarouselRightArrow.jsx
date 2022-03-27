@@ -1,6 +1,5 @@
 import React from 'react'
 import { IconButton } from '@mui/material';
-
 import { ChevronRight } from '@mui/icons-material'
 
 const CarouselRightArrow = ({ onClick, ...props }) => {

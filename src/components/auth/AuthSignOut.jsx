@@ -1,8 +1,8 @@
 import { useState, useContext } from 'react'
 import PropTypes from 'prop-types'
-import useAlerts from '../hooks/useAlerts'
-import useAuth from '../hooks/useAuth'
-import ShopContext from '../context/ShopContext'
+import useAlerts from '../../hooks/useAlerts'
+import useAuth from '../../hooks/useAuth'
+import ShopContext from '../../context/ShopContext'
 import { Button, Box } from '@mui/material';
 
 const AuthSignIn = ({ handleToggle, ...props }) => {
