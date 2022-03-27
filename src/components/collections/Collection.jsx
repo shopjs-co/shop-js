@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { useRouter } from 'next/router'
 import { Box, Button, Typography } from '@mui/material';
 import Image from '../images/Image'
+import { EMPTY_IMAGE_URL } from '../../utils/constants'
 
 const Collection = ({
     styles,
@@ -23,7 +24,7 @@ const Collection = ({
         >
           <Image
             layout='fill'
-            src={ collection?.image?.originalSrc }
+            src={ collection?.image?.originalSrc || EMPTY_IMAGE_URL }
             alt={ collection.title }
           />
         </Button>

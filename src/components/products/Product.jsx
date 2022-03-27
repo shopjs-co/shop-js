@@ -4,6 +4,7 @@ import { useRouter } from 'next/router'
 import { Button, Box, Typography } from '@mui/material';
 import Image from '../images/Image'
 import { formatCurrency } from '../../utils'
+import { EMPTY_IMAGE_URL } from '../../utils/constants'
 
 const Product = ({
     styles,
@@ -25,7 +26,7 @@ const Product = ({
           <Image
             alt={ product.title }
             layout='fill'
-            src={ product?.images?.edges[0]?.node?.src || EmptyImage }
+            src={ product?.images?.edges[0]?.node?.src || '' }
           />
         </Button>
         <Box py={1} px={1}>
