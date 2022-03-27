@@ -1,7 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Box } from '@mui/material';
-import { SizeSelector, ColorSelector } from 'components'
+import SizeSelector from './SizeSelector'
+import ColorSelector from './ColorSelector'
 
 const VariantSelector = ({
     selectedOptions,

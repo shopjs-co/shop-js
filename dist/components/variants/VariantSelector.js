@@ -11,7 +11,9 @@ var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _material = require("@mui/material");
 
-var _components = require("components");
+var _SizeSelector = _interopRequireDefault(require("./SizeSelector"));
+
+var _ColorSelector = _interopRequireDefault(require("./ColorSelector"));
 
 var _excluded = ["selectedOptions", "handleChange", "options", "styles"];
 
@@ -41,13 +43,13 @@ var VariantSelector = function VariantSelector(_ref) {
     sx: sx.root
   }, /*#__PURE__*/_react["default"].createElement(_material.Box, {
     my: 2
-  }, colorOption && /*#__PURE__*/_react["default"].createElement(_components.ColorSelector, {
+  }, colorOption && /*#__PURE__*/_react["default"].createElement(_ColorSelector["default"], {
     selected: selectedOptions["Color"],
     handleChange: handleChange,
     option: colorOption
   })), /*#__PURE__*/_react["default"].createElement(_material.Box, {
     my: 2
-  }, sizeOption && /*#__PURE__*/_react["default"].createElement(_components.SizeSelector, {
+  }, sizeOption && /*#__PURE__*/_react["default"].createElement(_SizeSelector["default"], {
     selected: selectedOptions["Size"],
     handleChange: handleChange,
     option: sizeOption
