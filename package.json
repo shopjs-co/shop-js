@@ -1,0 +1,43 @@
+{
+  "name": "@shopjs/core",
+  "version": "0.0.1",
+  "description": "ShopJS - Shopify react platform.",
+  "main": "index.js",
+  "scripts": {
+    "build": "babel src -d dist",
+    "deploy": "npm run build && git add . && git commit -m \"deploy\" && git push",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "mui"
+  ],
+  "author": "Rami Bitar",
+  "license": "MIT",
+  "peerDependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.16.8",
+    "@babel/core": "^7.16.7",
+    "@babel/preset-env": "^7.16.8",
+    "@babel/preset-react": "^7.16.7"
+  },
+  "dependencies": {
+    "@apollo/client": "^3.5.10",
+    "@emotion/react": "^11.7.1",
+    "@emotion/styled": "^11.6.0",
+    "@mui/icons-material": "^5.3.1",
+    "@mui/material": "^5.2.8",
+    "@mui/styles": "^5.3.0",
+    "apollo-boost": "^0.4.9",
+    "apollo-link-context": "^1.0.20",
+    "graphql": "^15.8.0",
+    "prop-types": "^15.7.2",
+    "react-feather": "^2.0.9",
+    "react-images": "^1.2.0-beta.7",
+    "react-images-viewer": "^1.7.1",
+    "react-multi-carousel": "^2.6.1",
+    "react-sticky-el": "^2.0.5"
+  }
+}
