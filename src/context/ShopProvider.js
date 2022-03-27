@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import ShopContext from './ShopContext'
 import { ApolloProvider } from '@apollo/client'
-import { useApollo } from 'apollo/client'
+import { useApollo } from '@apollo/client'
 
 const ShopProvider = ({ 
       children, 
