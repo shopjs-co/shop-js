@@ -9,8 +9,6 @@ var _react = _interopRequireDefault(require("react"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
-var _router = require("next/router");
-
 var _material = require("@mui/material");
 
 var _iconsMaterial = require("@mui/icons-material");
@@ -21,7 +19,7 @@ var _CartButton = _interopRequireDefault(require("./cart/CartButton"));
 
 var _Search = _interopRequireDefault(require("./search/Search"));
 
-var _excluded = ["styles", "logo"];
+var _excluded = ["styles", "handleClick", "logo"];
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -37,14 +35,9 @@ function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) r
 
 var Header = function Header(_ref) {
   var styles = _ref.styles,
+      handleClick = _ref.handleClick,
       Logo = _ref.logo,
       props = _objectWithoutProperties(_ref, _excluded);
-
-  var router = (0, _router.useRouter)();
-
-  var handleClick = function handleClick(path) {
-    return router.push(path);
-  };
 
   return /*#__PURE__*/_react["default"].createElement(_material.Box, {
     sx: _objectSpread(_objectSpread({}, sx.root), styles)

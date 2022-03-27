@@ -9,15 +9,13 @@ var _react = _interopRequireDefault(require("react"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
-var _router = require("next/router");
-
 var _material = require("@mui/material");
 
 var _Image = _interopRequireDefault(require("../images/Image"));
 
 var _constants = require("../../utils/constants");
 
-var _excluded = ["styles", "collection"];
+var _excluded = ["styles", "collection", "handleClick"];
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -30,13 +28,8 @@ var Collection = function Collection(_ref) {
 
   var styles = _ref.styles,
       collection = _ref.collection,
+      handleClick = _ref.handleClick,
       props = _objectWithoutProperties(_ref, _excluded);
-
-  var router = (0, _router.useRouter)();
-
-  var handleClick = function handleClick() {
-    return router.push("/collections/".concat(collection.handle));
-  };
 
   return /*#__PURE__*/_react["default"].createElement(_material.Box, {
     sx: sx.root

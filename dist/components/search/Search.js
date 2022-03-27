@@ -11,13 +11,11 @@ var _react = _interopRequireWildcard(require("react"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
-var _router = require("next/router");
-
 var _SearchInput = _interopRequireDefault(require("./SearchInput"));
 
 var _material = require("@mui/material");
 
-var _excluded = ["styles"];
+var _excluded = ["styles", "handleSearch"];
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -49,9 +47,8 @@ function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) r
 
 var Search = function Search(_ref) {
   var styles = _ref.styles,
+      handleSearch = _ref.handleSearch,
       props = _objectWithoutProperties(_ref, _excluded);
-
-  var router = (0, _router.useRouter)();
 
   var _useState = (0, _react.useState)(''),
       _useState2 = _slicedToArray(_useState, 2),
@@ -60,10 +57,6 @@ var Search = function Search(_ref) {
 
   var handleChange = function handleChange(ev) {
     return setQuery(ev.target.value);
-  };
-
-  var handleSearch = function handleSearch() {
-    return router.push("/search/".concat(query.split(' ').join('-')));
   };
 
   var handleClear = function handleClear() {

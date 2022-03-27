@@ -9,8 +9,6 @@ var _react = _interopRequireDefault(require("react"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
-var _image = _interopRequireDefault(require("next/image"));
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 var NextImage = function NextImage(_ref) {
@@ -33,13 +31,14 @@ var NextImage = function NextImage(_ref) {
     return resizedUrl;
   };
 
-  return /*#__PURE__*/_react["default"].createElement(_image["default"], {
-    objectFit: objectFit,
-    loader: fastlyLoader,
+  return /*#__PURE__*/_react["default"].createElement("img", {
     src: src,
     alt: alt,
     width: width,
-    height: height
+    height: height,
+    style: {
+      objectFit: objectFit
+    }
   });
 };
 
