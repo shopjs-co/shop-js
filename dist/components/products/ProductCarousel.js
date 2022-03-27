@@ -23,8 +23,6 @@ var _reactMultiCarousel = _interopRequireDefault(require("react-multi-carousel")
 
 var _shopConfig = require("../../shop-config");
 
-require("react-multi-carousel/lib/styles.css");
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }

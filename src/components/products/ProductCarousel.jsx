@@ -7,7 +7,6 @@ import Product from './Product'
 import ProductSkeleton from '../skeletons/ProductSkeleton'
 import Carousel from 'react-multi-carousel'
 import { responsive } from '../../shop-config'
-import 'react-multi-carousel/lib/styles.css';
 
 const ProductCarousel = ({
     products,

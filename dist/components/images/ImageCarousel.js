@@ -21,8 +21,6 @@ var _shopConfig = require("../../shop-config");
 
 var _reactMultiCarousel = _interopRequireDefault(require("react-multi-carousel"));
 
-require("react-multi-carousel/lib/styles.css");
-
 var _excluded = ["images", "loading", "onClick", "itemWidth", "itemHeight", "numSkeletons", "xs", "sm", "md", "lg"],
     _excluded2 = ["onClick"];
 
