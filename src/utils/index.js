@@ -1,5 +1,5 @@
 
-export const resizeImage = (url, height, width) => {
+export const resizeImage = (url, width=640, height=480) => {
   if(!url) return;   
   let isShopify = /(cdn\.shopify\.com)/i.test(url)
   let resizedUrl = url

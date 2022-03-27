@@ -5,7 +5,9 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.resizeImage = exports.formatCurrency = void 0;
 
-var resizeImage = function resizeImage(url, height, width) {
+var resizeImage = function resizeImage(url) {
+  var width = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 640;
+  var height = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 480;
   if (!url) return;
   var isShopify = /(cdn\.shopify\.com)/i.test(url);
   var resizedUrl = url;
