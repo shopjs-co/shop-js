@@ -21,7 +21,7 @@ const Product = ({
           <Image
             alt={ product.title }
             layout='fill'
-            src={ product?.images?.edges[0]?.node?.src || '' }
+            src={ product?.images?.edges[0]?.node?.src || EMPTY_IMAGE_URL }
           />
         </Button>
         <Box py={1} px={1}>
