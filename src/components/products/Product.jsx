@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { useRouter } from 'next/router'
 import { Button, Box, Typography } from '@mui/material';
 import Image from '../images/Image'
 import { formatCurrency } from '../../utils'
@@ -9,13 +8,9 @@ import { EMPTY_IMAGE_URL } from '../../utils/constants'
 const Product = ({
     styles,
     product,
+    handleClick,
     ...props
   }) => {
-
-  const router = useRouter()
-
-  const handleClick = () =>
-    router.push(`/products/${product.handle}`)
 
   return(
       <Box sx={ sx.root }>

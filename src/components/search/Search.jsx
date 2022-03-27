@@ -1,20 +1,19 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
-import { useRouter } from 'next/router'
 import SearchInput from './SearchInput'
 import { Box } from '@mui/material'
 
-const Search = ({ styles, ...props }) => {
-
-  const router = useRouter()
+const Search = ({ 
+  styles, 
+  handleSearch,
+  ...props 
+}) => {
 
   const [query, setQuery] = useState('')
 
   const handleChange = (ev) =>
     setQuery(ev.target.value);
 
-  const handleSearch = () =>
-    router.push(`/search/${query.split(' ').join('-')}`);
 
   const handleClear = () => setQuery('')
 

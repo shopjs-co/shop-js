@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { useRouter } from 'next/router'
 import { 
   AppBar, 
   Box, 
@@ -17,11 +16,7 @@ import AuthButton from './auth/AuthButton'
 import CartButton from './cart/CartButton'
 import Search from './search/Search'
 
-const Header = ({ styles, logo: Logo, ...props }) => {
-
-  const router = useRouter()
-
-  const handleClick = (path) => router.push(path)
+const Header = ({ styles, handleClick, logo: Logo, ...props }) => {  
 
   return (
     <Box sx={{...sx.root, ...styles }}>

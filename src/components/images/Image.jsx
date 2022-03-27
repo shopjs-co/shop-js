@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Image from 'next/image'
 
 const NextImage = ({ src, width=640, height=640, objectFit='cover', alt }) => {
 
@@ -12,13 +11,14 @@ const NextImage = ({ src, width=640, height=640, objectFit='cover', alt }) => {
   }
 
   return (
-    <Image
-      objectFit={objectFit}
-      loader={fastlyLoader}
+    <img
       src={src}
       alt={alt}
       width={width}
       height={height}
+      style={{
+        objectFit: objectFit
+      }}
     />
   )
 }

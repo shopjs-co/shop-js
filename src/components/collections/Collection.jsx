@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { useRouter } from 'next/router'
 import { Box, Button, Typography } from '@mui/material';
 import Image from '../images/Image'
 import { EMPTY_IMAGE_URL } from '../../utils/constants'
@@ -8,13 +7,10 @@ import { EMPTY_IMAGE_URL } from '../../utils/constants'
 const Collection = ({
     styles,
     collection,
+    handleClick,
     ...props
   }) => {
-
-  const router = useRouter()
-
-  const handleClick = () =>
-    router.push(`/collections/${collection.handle}`)
+  
 
   return(
       <Box sx={ sx.root }>
