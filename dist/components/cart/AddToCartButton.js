@@ -15,7 +15,7 @@ var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _material = require("@mui/material");
 
-var _ShopContext = _interopRequireDefault(require("../context/ShopContext"));
+var _ShopContext = _interopRequireDefault(require("../../context/ShopContext"));
 
 var _excluded = ["styles", "variant", "isAvailable", "quantity", "selectOptionsRef"];
 

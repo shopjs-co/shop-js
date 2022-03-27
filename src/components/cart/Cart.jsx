@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 import PropTypes from 'prop-types'
 import { Box, Button, Drawer, Typography } from '@mui/material';
 import { ArrowBack } from '@mui/icons-material'
-import ShopContext from '../context/ShopContext'
+import ShopContext from '../../context/ShopContext'
 import useCheckout from '../../hooks/useCheckout'
 import CartLineItems from './CartLineItems'
 import CartLineItemTotals from './CartLineItemTotals'

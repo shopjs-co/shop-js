@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 import PropTypes from 'prop-types'
 import { Badge, IconButton } from '@mui/material';
 import CartIcon from './CartIcon'
-import ShopContext from '../context/ShopContext'
+import ShopContext from '../../context/ShopContext'
 
 const CartButton = ({ styles, ...props }) => {
 

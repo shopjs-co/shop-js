@@ -15,7 +15,7 @@ var _material = require("@mui/material");
 
 var _CartIcon = _interopRequireDefault(require("./CartIcon"));
 
-var _ShopContext = _interopRequireDefault(require("../context/ShopContext"));
+var _ShopContext = _interopRequireDefault(require("../../context/ShopContext"));
 
 var _excluded = ["styles"];
 

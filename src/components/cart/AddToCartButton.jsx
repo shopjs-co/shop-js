@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 import { useAlerts, useCheckout } from 'hooks'
 import PropTypes from 'prop-types'
 import { Button, CircularProgress } from '@mui/material';
-import ShopContext from '../context/ShopContext'
+import ShopContext from '../../context/ShopContext'
 
 
 const AddToCartButton = ({
