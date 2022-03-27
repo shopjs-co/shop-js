@@ -1,5 +1,5 @@
 import { gql } from '@apollo/client';
-import { ProductFragment } from './graphql/products'
+import { ProductFragment } from './products'
 
 const CollectionFragment = gql`
   fragment CollectionFragment on Collection {

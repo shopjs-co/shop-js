@@ -7,7 +7,7 @@ exports.CHECKOUT_DISCOUNT_CODE_REMOVE = exports.CHECKOUT_DISCOUNT_CODE_APPLY = v
 
 var _client = require("@apollo/client");
 
-var _checkout = require("./graphql/checkout");
+var _checkout = require("./checkout");
 
 var _templateObject, _templateObject2;
 
