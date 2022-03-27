@@ -6,7 +6,7 @@ export const resizeImage = (url, height, width) => {
   if(isShopify){
     let extension = url.split('.').pop()
     let filePath = url.split(`.${extension}`)[0]
-    resizedSrc = `${filePath}_${width}x${height}.${extension}`    
+    resizedUrl = `${filePath}_${width}x${height}.${extension}`    
   }    
   return resizedUrl
 }

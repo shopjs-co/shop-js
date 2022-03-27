@@ -13,7 +13,7 @@ var resizeImage = function resizeImage(url, height, width) {
   if (isShopify) {
     var extension = url.split('.').pop();
     var filePath = url.split(".".concat(extension))[0];
-    resizedSrc = "".concat(filePath, "_").concat(width, "x").concat(height, ".").concat(extension);
+    resizedUrl = "".concat(filePath, "_").concat(width, "x").concat(height, ".").concat(extension);
   }
 
   return resizedUrl;
