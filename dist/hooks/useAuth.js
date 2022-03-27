@@ -13,7 +13,7 @@ var _client = require("@apollo/client");
 
 var _ShopContext = _interopRequireDefault(require("../context/ShopContext"));
 
-var _auth = require("graphql/auth");
+var _auth = require("../graphql/auth");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 

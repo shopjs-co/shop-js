@@ -3,7 +3,7 @@ import { useLazyQuery } from '@apollo/client'
 import {
   QUERY_COLLECTION,
   QUERY_COLLECTIONS
-} from 'graphql/collections'
+} from '../graphql/collections'
 
 const useCollections = () => {
 

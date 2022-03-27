@@ -4,7 +4,7 @@ import {
   QUERY_PRODUCT,
   QUERY_PRODUCTS,
   QUERY_PRODUCT_RECOMMENDATIONS
-} from 'graphql/products'
+} from '../graphql/products'
 
 const useProducts = () => {
 

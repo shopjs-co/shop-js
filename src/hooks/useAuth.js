@@ -6,7 +6,7 @@ import {
   MUTATION_SIGN_UP,
   MUTATION_SIGN_OUT,
   MUTATION_REFRESH_TOKEN
-} from 'graphql/auth'
+} from '../graphql/auth'
 
 const useAuth = ({ ...props }) => {
 

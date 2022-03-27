@@ -13,9 +13,9 @@ var _client = require("@apollo/client");
 
 var _ShopContext = _interopRequireDefault(require("../context/ShopContext"));
 
-var _checkout = require("graphql/checkout");
+var _checkout = require("../graphql/checkout");
 
-var _discounts = require("graphql/discounts");
+var _discounts = require("../graphql/discounts");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 

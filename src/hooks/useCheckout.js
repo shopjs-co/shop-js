@@ -6,11 +6,11 @@ import {
   CHECKOUT_CREATE,
   CHECKOUT_LINE_ITEMS_ADD,
   CHECKOUT_LINE_ITEMS_REMOVE,
-} from 'graphql/checkout'
+} from '../graphql/checkout'
 import {
   CHECKOUT_DISCOUNT_CODE_APPLY,
   CHECKOUT_DISCOUNT_CODE_REMOVE,
-} from 'graphql/discounts'
+} from '../graphql/discounts'
 
 const useCheckout = ({ ...props }) => {
 

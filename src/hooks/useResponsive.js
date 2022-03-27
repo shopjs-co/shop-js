@@ -1,8 +1,4 @@
-import {
-  useState,
-  useEffect,
-  useLayoutEffect
-} from 'react'
+import React, { useState, useEffect, useLayoutEffect } from 'react'
 import { useTheme } from '@mui/material/styles'
 import useMediaQuery from '@mui/material/useMediaQuery'
 import { responsive } from 'shop-config'

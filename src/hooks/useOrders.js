@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { useLazyQuery } from '@apollo/client'
 import {
   QUERY_CUSTOMER_ORDERS
-} from 'graphql/orders'
+} from '../graphql/orders'
 
 const useOrders = () => {
 
