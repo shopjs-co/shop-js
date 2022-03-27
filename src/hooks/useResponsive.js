@@ -1,7 +1,6 @@
 import {
   useState,
   useEffect,
-  useMemo,
   useLayoutEffect
 } from 'react'
 import { useTheme } from '@mui/material/styles'

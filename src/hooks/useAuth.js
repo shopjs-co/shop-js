@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useContext } from 'react'
-import useAlerts from '../../hooks/useAlerts'
-import { useLazyQuery, useMutation } from '@apollo/client'
+import { useMutation } from '@apollo/client'
 import ShopContext from '../context/ShopContext'
 import {
   MUTATION_SIGN_IN,

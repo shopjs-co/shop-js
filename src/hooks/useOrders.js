@@ -1,6 +1,5 @@
-import React, { useState, useEffect, useContext } from 'react'
+import React, { useState, useEffect } from 'react'
 import { useLazyQuery } from '@apollo/client'
-import ShopContext from '../context/ShopContext'
 import {
   QUERY_CUSTOMER_ORDERS
 } from 'graphql/orders'
