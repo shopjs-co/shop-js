@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { resizeImage } from '../../utls'
+import { resizeImage } from '../../utils'
 
 const ResponsiveImage = ({ src, alt, ...rest }) => {
   return (

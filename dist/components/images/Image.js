@@ -9,7 +9,7 @@ var _react = _interopRequireDefault(require("react"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
-var _utls = require("../../utls");
+var _utils = require("../../utils");
 
 var _excluded = ["src", "alt"];
 
@@ -27,7 +27,7 @@ var ResponsiveImage = function ResponsiveImage(_ref) {
       rest = _objectWithoutProperties(_ref, _excluded);
 
   return /*#__PURE__*/_react["default"].createElement("img", _extends({
-    src: (0, _utls.resizeImage)(src),
+    src: (0, _utils.resizeImage)(src),
     alt: alt,
     style: styles.image
   }, rest));
