@@ -13,7 +13,7 @@ var _styles = require("@mui/material/styles");
 
 var _useMediaQuery = _interopRequireDefault(require("@mui/material/useMediaQuery"));
 
-var _shopConfig = require("shop-config");
+var _shopConfig = require("../shop-config");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 

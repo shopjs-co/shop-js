@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useLayoutEffect } from 'react'
 import { useTheme } from '@mui/material/styles'
 import useMediaQuery from '@mui/material/useMediaQuery'
-import { responsive } from 'shop-config'
+import { responsive } from '../shop-config'
 
 const DEFAULT_ITEMS = 2
 
