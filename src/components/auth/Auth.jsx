@@ -7,8 +7,8 @@ import {
   Typography 
 } from '@mui/material';
 import AuthSignIn from './AuthSignIn'
-import AuthSignIn from './AuthSignOut'
-import AuthSignIn from './AuthRegister'
+import AuthSignOut from './AuthSignOut'
+import AuthRegister from './AuthRegister'
 import ShopContext from '../../context/ShopContext'
 import { ArrowBack } from '@mui/icons-material'
 
