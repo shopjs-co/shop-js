@@ -5,6 +5,8 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports["default"] = void 0;
 
+var _react = _interopRequireDefault(require("react"));
+
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _material = require("@mui/material");
@@ -35,17 +37,17 @@ var VariantSelector = function VariantSelector(_ref) {
   var materialOption = options.find(function (o) {
     return o.name == 'Material';
   });
-  return /*#__PURE__*/React.createElement(_material.Box, {
+  return /*#__PURE__*/_react["default"].createElement(_material.Box, {
     sx: sx.root
-  }, /*#__PURE__*/React.createElement(_material.Box, {
+  }, /*#__PURE__*/_react["default"].createElement(_material.Box, {
     my: 2
-  }, colorOption && /*#__PURE__*/React.createElement(_components.ColorSelector, {
+  }, colorOption && /*#__PURE__*/_react["default"].createElement(_components.ColorSelector, {
     selected: selectedOptions["Color"],
     handleChange: handleChange,
     option: colorOption
-  })), /*#__PURE__*/React.createElement(_material.Box, {
+  })), /*#__PURE__*/_react["default"].createElement(_material.Box, {
     my: 2
-  }, sizeOption && /*#__PURE__*/React.createElement(_components.SizeSelector, {
+  }, sizeOption && /*#__PURE__*/_react["default"].createElement(_components.SizeSelector, {
     selected: selectedOptions["Size"],
     handleChange: handleChange,
     option: sizeOption

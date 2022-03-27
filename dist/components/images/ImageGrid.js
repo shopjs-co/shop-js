@@ -5,6 +5,8 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports["default"] = void 0;
 
+var _react = _interopRequireDefault(require("react"));
+
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _material = require("@mui/material");
@@ -53,36 +55,36 @@ var ImageGrid = function ImageGrid(_ref) {
       lg = _ref$lg === void 0 ? 6 : _ref$lg,
       props = _objectWithoutProperties(_ref, _excluded);
 
-  return /*#__PURE__*/React.createElement(_material.Grid, {
+  return /*#__PURE__*/_react["default"].createElement(_material.Grid, {
     container: true,
     spacing: 1
   }, images ? images.map(function (image, i) {
-    return /*#__PURE__*/React.createElement(_material.Grid, {
+    return /*#__PURE__*/_react["default"].createElement(_material.Grid, {
       item: true,
       key: i,
       xs: i == 0 ? 12 : xs,
       sm: i == 0 ? 12 : sm,
       md: i == 0 ? 12 : md,
       lg: i == 0 ? 12 : lg
-    }, /*#__PURE__*/React.createElement(_material.Button, {
+    }, /*#__PURE__*/_react["default"].createElement(_material.Button, {
       sx: sx.button,
       onClick: function onClick() {
         return _onClick(i);
       }
-    }, /*#__PURE__*/React.createElement(_Image["default"], {
+    }, /*#__PURE__*/_react["default"].createElement(_Image["default"], {
       src: image,
       width: i == 0 ? itemWidth * 2 : itemWidth,
       height: i == 0 ? itemWidth * 2 : itemWidth
     })));
   }) : _toConsumableArray(Array(numSkeletons)).map(function (_, i) {
-    return /*#__PURE__*/React.createElement(_material.Grid, {
+    return /*#__PURE__*/_react["default"].createElement(_material.Grid, {
       item: true,
       xs: xs,
       sm: sm,
       md: md,
       lg: lg,
       key: i
-    }, /*#__PURE__*/React.createElement(_ImageSkeleton["default"], null));
+    }, /*#__PURE__*/_react["default"].createElement(_ImageSkeleton["default"], null));
   }));
 };
 

@@ -5,6 +5,8 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports["default"] = void 0;
 
+var _react = _interopRequireDefault(require("react"));
+
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _material = require("@mui/material");
@@ -46,29 +48,29 @@ var ProductGrid = function ProductGrid(_ref) {
       lg = _ref$lg === void 0 ? 3 : _ref$lg,
       props = _objectWithoutProperties(_ref, _excluded);
 
-  return /*#__PURE__*/React.createElement(_material.Grid, {
+  return /*#__PURE__*/_react["default"].createElement(_material.Grid, {
     container: true,
     spacing: 1
   }, products && !loading ? products.map(function (product) {
-    return /*#__PURE__*/React.createElement(_material.Grid, {
+    return /*#__PURE__*/_react["default"].createElement(_material.Grid, {
       item: true,
       xs: xs,
       sm: sm,
       md: md,
       lg: lg,
       key: product.id
-    }, /*#__PURE__*/React.createElement(_Product["default"], {
+    }, /*#__PURE__*/_react["default"].createElement(_Product["default"], {
       product: product
     }));
   }) : _toConsumableArray(Array(12)).map(function (_, i) {
-    return /*#__PURE__*/React.createElement(_material.Grid, {
+    return /*#__PURE__*/_react["default"].createElement(_material.Grid, {
       item: true,
       xs: xs,
       sm: sm,
       md: md,
       lg: lg,
       key: i
-    }, /*#__PURE__*/React.createElement(_ProductSkeleton["default"], null));
+    }, /*#__PURE__*/_react["default"].createElement(_ProductSkeleton["default"], null));
   }));
 };
 

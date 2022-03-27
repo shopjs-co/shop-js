@@ -1,3 +1,4 @@
+import React from 'react'
 import PropTypes from 'prop-types'
 import { Button, Grid } from '@mui/material';
 import Image from '../images/Image'

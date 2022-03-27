@@ -1,3 +1,4 @@
+import React from 'react'
 export default function Layout({ children, ...props }) {
   return(
     <Box sx={ sx.root  }>

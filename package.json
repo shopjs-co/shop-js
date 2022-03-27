@@ -33,6 +33,7 @@
     "apollo-boost": "^0.4.9",
     "apollo-link-context": "^1.0.20",
     "graphql": "^15.8.0",
+    "moment": "^2.29.1",
     "prop-types": "^15.7.2",
     "react-feather": "^2.0.9",
     "react-images": "^1.2.0-beta.7",

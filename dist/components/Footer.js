@@ -5,6 +5,8 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports["default"] = void 0;
 
+var _react = _interopRequireDefault(require("react"));
+
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _material = require("@mui/material");
@@ -29,11 +31,11 @@ var Footer = function Footer(_ref) {
   var styles = _ref.styles,
       props = _objectWithoutProperties(_ref, _excluded);
 
-  return /*#__PURE__*/React.createElement(_material.Box, {
+  return /*#__PURE__*/_react["default"].createElement(_material.Box, {
     sx: _objectSpread(_objectSpread({}, sx.root), styles)
-  }, /*#__PURE__*/React.createElement(_material.Container, {
+  }, /*#__PURE__*/_react["default"].createElement(_material.Container, {
     maxWidth: "lg"
-  }, /*#__PURE__*/React.createElement("img", {
+  }, /*#__PURE__*/_react["default"].createElement("img", {
     src: _logo["default"]
   })));
 };

@@ -5,6 +5,8 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports["default"] = void 0;
 
+var _react = _interopRequireDefault(require("react"));
+
 var _useResponsive2 = _interopRequireDefault(require("../../hooks/useResponsive"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
@@ -58,9 +60,9 @@ var ProductCarousel = function ProductCarousel(_ref) {
   var _useResponsive = (0, _useResponsive2["default"])(),
       itemsPerCarousel = _useResponsive.itemsPerCarousel;
 
-  return /*#__PURE__*/React.createElement(_material.Box, {
+  return /*#__PURE__*/_react["default"].createElement(_material.Box, {
     sx: _objectSpread(_objectSpread({}, sx.root), styles)
-  }, products ? /*#__PURE__*/React.createElement(_reactMultiCarousel["default"], {
+  }, products ? /*#__PURE__*/_react["default"].createElement(_reactMultiCarousel["default"], {
     swipeable: swipeable,
     draggable: draggable,
     showDots: showDots,
@@ -69,20 +71,20 @@ var ProductCarousel = function ProductCarousel(_ref) {
     infinite: true,
     autoPlay: autoPlay,
     keyBoardControl: true,
-    customLeftArrow: /*#__PURE__*/React.createElement(_CarouselLeftArrow["default"], null),
-    customRightArrow: /*#__PURE__*/React.createElement(_CarouselRightArrow["default"], null),
+    customLeftArrow: /*#__PURE__*/_react["default"].createElement(_CarouselLeftArrow["default"], null),
+    customRightArrow: /*#__PURE__*/_react["default"].createElement(_CarouselRightArrow["default"], null),
     slidesToSlide: itemsPerCarousel
   }, products.map(function (product) {
-    return /*#__PURE__*/React.createElement(_Product["default"], {
+    return /*#__PURE__*/_react["default"].createElement(_Product["default"], {
       key: product.id,
       product: product
     });
-  })) : /*#__PURE__*/React.createElement(_material.Box, {
+  })) : /*#__PURE__*/_react["default"].createElement(_material.Box, {
     display: "flex",
     justifyContent: "space-between",
     flexDirection: "row"
   }, _toConsumableArray(Array(itemsPerCarousel)).map(function (_, i) {
-    return /*#__PURE__*/React.createElement(_ProductSkeleton["default"], {
+    return /*#__PURE__*/_react["default"].createElement(_ProductSkeleton["default"], {
       key: i,
       sx: sx.item
     });

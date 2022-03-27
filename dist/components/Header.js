@@ -5,6 +5,8 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports["default"] = void 0;
 
+var _react = _interopRequireDefault(require("react"));
+
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _router = require("next/router");
@@ -44,33 +46,33 @@ var Header = function Header(_ref) {
     return router.push(path);
   };
 
-  return /*#__PURE__*/React.createElement(_material.Box, {
+  return /*#__PURE__*/_react["default"].createElement(_material.Box, {
     sx: _objectSpread(_objectSpread({}, sx.root), styles)
-  }, /*#__PURE__*/React.createElement(_material.AppBar, {
+  }, /*#__PURE__*/_react["default"].createElement(_material.AppBar, {
     color: "inherit",
     position: "static",
     elevation: 0
-  }, /*#__PURE__*/React.createElement(_material.Toolbar, null, /*#__PURE__*/React.createElement(_material.Hidden, {
+  }, /*#__PURE__*/_react["default"].createElement(_material.Toolbar, null, /*#__PURE__*/_react["default"].createElement(_material.Hidden, {
     smUp: true
-  }, /*#__PURE__*/React.createElement(_material.IconButton, {
+  }, /*#__PURE__*/_react["default"].createElement(_material.IconButton, {
     color: "primary",
     edge: "start",
     size: "large"
-  }, /*#__PURE__*/React.createElement(_iconsMaterial.Menu, null))), /*#__PURE__*/React.createElement(_material.Box, {
+  }, /*#__PURE__*/_react["default"].createElement(_iconsMaterial.Menu, null))), /*#__PURE__*/_react["default"].createElement(_material.Box, {
     sx: sx.container
-  }, /*#__PURE__*/React.createElement(_material.Button, null, /*#__PURE__*/React.createElement("img", {
+  }, /*#__PURE__*/_react["default"].createElement(_material.Button, null, /*#__PURE__*/_react["default"].createElement("img", {
     src: Logo,
     style: sx.logo
-  }))), /*#__PURE__*/React.createElement(_material.Hidden, {
+  }))), /*#__PURE__*/_react["default"].createElement(_material.Hidden, {
     lgDown: true
-  }, /*#__PURE__*/React.createElement(_Search["default"], null)), /*#__PURE__*/React.createElement(_material.IconButton, {
+  }, /*#__PURE__*/_react["default"].createElement(_Search["default"], null)), /*#__PURE__*/_react["default"].createElement(_material.IconButton, {
     color: "primary",
     onClick: function onClick() {
       return handleClick('/');
     },
     sx: sx.menuButton,
     size: "large"
-  }, /*#__PURE__*/React.createElement(_iconsMaterial.StoreOutlined, null)), /*#__PURE__*/React.createElement(_AuthButton["default"], null), /*#__PURE__*/React.createElement(_CartButton["default"], null))));
+  }, /*#__PURE__*/_react["default"].createElement(_iconsMaterial.StoreOutlined, null)), /*#__PURE__*/_react["default"].createElement(_AuthButton["default"], null), /*#__PURE__*/_react["default"].createElement(_CartButton["default"], null))));
 };
 
 var _default = Header;

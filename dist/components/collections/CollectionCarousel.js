@@ -5,6 +5,8 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports["default"] = void 0;
 
+var _react = _interopRequireDefault(require("react"));
+
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _useResponsive2 = _interopRequireDefault(require("../../hooks/useResponsive"));
@@ -61,9 +63,9 @@ var CollectionCarousel = function CollectionCarousel(_ref) {
   var _useResponsive = (0, _useResponsive2["default"])(),
       itemsPerCarousel = _useResponsive.itemsPerCarousel;
 
-  return /*#__PURE__*/React.createElement(_material.Box, {
+  return /*#__PURE__*/_react["default"].createElement(_material.Box, {
     sx: sx.root
-  }, collections ? /*#__PURE__*/React.createElement(_reactMultiCarousel["default"], {
+  }, collections ? /*#__PURE__*/_react["default"].createElement(_reactMultiCarousel["default"], {
     swipeable: swipeable,
     draggable: draggable,
     showDots: showDots,
@@ -75,19 +77,19 @@ var CollectionCarousel = function CollectionCarousel(_ref) {
     transitionDuration: 500,
     slidesToSlide: itemsPerCarousel,
     itemClass: 'carousel-item',
-    customLeftArrow: /*#__PURE__*/React.createElement(_CarouselLeftArrow["default"], null),
-    customRightArrow: /*#__PURE__*/React.createElement(_CarouselRightArrow["default"], null)
+    customLeftArrow: /*#__PURE__*/_react["default"].createElement(_CarouselLeftArrow["default"], null),
+    customRightArrow: /*#__PURE__*/_react["default"].createElement(_CarouselRightArrow["default"], null)
   }, collections.map(function (collection) {
-    return /*#__PURE__*/React.createElement(_Collection["default"], {
+    return /*#__PURE__*/_react["default"].createElement(_Collection["default"], {
       key: collection.id,
       collection: collection
     });
-  })) : /*#__PURE__*/React.createElement(_material.Box, {
+  })) : /*#__PURE__*/_react["default"].createElement(_material.Box, {
     display: "flex",
     justifyContent: "space-between",
     flexDirection: "row"
   }, _toConsumableArray(Array(itemsPerCarousel)).map(function (_, i) {
-    return /*#__PURE__*/React.createElement(_CollectionSkeleton["default"], {
+    return /*#__PURE__*/_react["default"].createElement(_CollectionSkeleton["default"], {
       key: i,
       sx: sx.item
     });

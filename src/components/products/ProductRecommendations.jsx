@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import React, { useEffect } from 'react'
 import PropTypes from 'prop-types'
 import { Typography } from '@mui/material';
 import useProducts from '../../hooks/useProducts'

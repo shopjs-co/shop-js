@@ -5,6 +5,8 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports["default"] = void 0;
 
+var _react = _interopRequireDefault(require("react"));
+
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _material = require("@mui/material");
@@ -30,13 +32,13 @@ var MaterialSelector = function MaterialSelector(_ref) {
       styles = _ref.styles,
       props = _objectWithoutProperties(_ref, _excluded);
 
-  return /*#__PURE__*/React.createElement(Box, {
+  return /*#__PURE__*/_react["default"].createElement(Box, {
     sx: _objectSpread(_objectSpread({}, sx.root), styles)
-  }, /*#__PURE__*/React.createElement(_material.Typography, {
+  }, /*#__PURE__*/_react["default"].createElement(_material.Typography, {
     variant: "body2",
     color: "textSecondary"
   }, "Select material"), option.values.map(function (value, i) {
-    return /*#__PURE__*/React.createElement(_material.Button, {
+    return /*#__PURE__*/_react["default"].createElement(_material.Button, {
       key: i,
       className: clsx(classes.button, _defineProperty({}, classes.active, selected === value)),
       color: "primary",

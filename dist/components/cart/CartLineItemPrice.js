@@ -5,6 +5,8 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports["default"] = void 0;
 
+var _react = _interopRequireDefault(require("react"));
+
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _useCheckout2 = _interopRequireDefault(require("../../hooks/useCheckout"));
@@ -39,24 +41,24 @@ var CartLineItemTotals = function CartLineItemTotals(_ref) {
       loading = _useCheckout.loading,
       checkoutDiscountCodeRemove = _useCheckout.checkoutDiscountCodeRemove;
 
-  return /*#__PURE__*/React.createElement(_material.Box, {
+  return /*#__PURE__*/_react["default"].createElement(_material.Box, {
     my: 1,
     display: "flex",
     justifyContent: "space-between",
     width: "100%",
     flexDirection: "row",
     sx: _objectSpread(_objectSpread({}, sx.root), styles)
-  }, /*#__PURE__*/React.createElement(_material.Box, {
+  }, /*#__PURE__*/_react["default"].createElement(_material.Box, {
     display: "flex",
     flexDirection: "row"
-  }, /*#__PURE__*/React.createElement(_material.Typography, {
+  }, /*#__PURE__*/_react["default"].createElement(_material.Typography, {
     variant: "body1",
     color: "textSecondary"
-  }, label)), loading ? /*#__PURE__*/React.createElement(_material.CircularProgress, {
+  }, label)), loading ? /*#__PURE__*/_react["default"].createElement(_material.CircularProgress, {
     size: 20
-  }) : /*#__PURE__*/React.createElement(_material.Typography, {
+  }) : /*#__PURE__*/_react["default"].createElement(_material.Typography, {
     variant: variant
-  }, isDiscountCode && /*#__PURE__*/React.createElement(_material.Link, {
+  }, isDiscountCode && /*#__PURE__*/_react["default"].createElement(_material.Link, {
     sx: sx.discountCode,
     onClick: checkoutDiscountCodeRemove
   }, "remove"), value));

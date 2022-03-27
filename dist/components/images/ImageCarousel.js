@@ -5,6 +5,8 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports["default"] = void 0;
 
+var _react = _interopRequireDefault(require("react"));
+
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _material = require("@mui/material");
@@ -63,20 +65,20 @@ var ImageCarousel = function ImageCarousel(_ref) {
     var active = rest.active; // onMove means if dragging or swiping in progress.
     // active is provided by this lib for checking if the item is active or not.
 
-    return /*#__PURE__*/React.createElement(_material.IconButton, {
+    return /*#__PURE__*/_react["default"].createElement(_material.IconButton, {
       sx: sx.dotButton,
       onClick: function onClick() {
         return _onClick();
       },
       size: "large"
-    }, /*#__PURE__*/React.createElement(_iconsMaterial.FiberManualRecord, {
+    }, /*#__PURE__*/_react["default"].createElement(_iconsMaterial.FiberManualRecord, {
       sx: _objectSpread(_objectSpread({}, sx.dot), active && sx.active)
     }));
   };
 
-  return /*#__PURE__*/React.createElement(_material.Box, {
+  return /*#__PURE__*/_react["default"].createElement(_material.Box, {
     sx: sx.mobileCarousel
-  }, images && /*#__PURE__*/React.createElement(_reactMultiCarousel["default"], {
+  }, images && /*#__PURE__*/_react["default"].createElement(_reactMultiCarousel["default"], {
     swipeable: true,
     draggable: true,
     responsive: _objectSpread({}, _shopConfig.responsive),
@@ -85,16 +87,16 @@ var ImageCarousel = function ImageCarousel(_ref) {
     keyBoardControl: true,
     slidesToSlide: 1,
     showDots: true,
-    customLeftArrow: /*#__PURE__*/React.createElement(_CarouselLeftArrow["default"], null),
-    customRightArrow: /*#__PURE__*/React.createElement(_CarouselRightArrow["default"], null),
-    customDot: /*#__PURE__*/React.createElement(CustomDot, null)
+    customLeftArrow: /*#__PURE__*/_react["default"].createElement(_CarouselLeftArrow["default"], null),
+    customRightArrow: /*#__PURE__*/_react["default"].createElement(_CarouselRightArrow["default"], null),
+    customDot: /*#__PURE__*/_react["default"].createElement(CustomDot, null)
   }, images.map(function (image, i) {
-    return /*#__PURE__*/React.createElement(_material.Button, {
+    return /*#__PURE__*/_react["default"].createElement(_material.Button, {
       sx: sx.button,
       onClick: function onClick() {
         return _onClick2(i);
       }
-    }, /*#__PURE__*/React.createElement(_Image["default"], {
+    }, /*#__PURE__*/_react["default"].createElement(_Image["default"], {
       key: i,
       src: image,
       width: itemWidth,

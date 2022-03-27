@@ -5,6 +5,8 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports["default"] = void 0;
 
+var _react = _interopRequireDefault(require("react"));
+
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _material = require("@mui/material");
@@ -22,29 +24,29 @@ var Modal = function Modal(_ref) {
       children = _ref.children,
       _ref$maxWidth = _ref.maxWidth,
       maxWidth = _ref$maxWidth === void 0 ? 'sm' : _ref$maxWidth;
-  return /*#__PURE__*/React.createElement(_material.Dialog, {
+  return /*#__PURE__*/_react["default"].createElement(_material.Dialog, {
     sx: sx.dialog,
     fullWidth: true,
     maxWidth: maxWidth,
     open: open,
     onClose: handleClose
-  }, /*#__PURE__*/React.createElement(_material.DialogTitle, {
+  }, /*#__PURE__*/_react["default"].createElement(_material.DialogTitle, {
     sx: sx.title,
     onClose: handleClose
-  }, /*#__PURE__*/React.createElement(_material.Box, {
+  }, /*#__PURE__*/_react["default"].createElement(_material.Box, {
     display: "flex",
     justifyContent: "space-between"
-  }, /*#__PURE__*/React.createElement(_material.Box, {
+  }, /*#__PURE__*/_react["default"].createElement(_material.Box, {
     display: "flex",
     flexDirection: "row"
-  }, /*#__PURE__*/React.createElement(_material.Typography, {
+  }, /*#__PURE__*/_react["default"].createElement(_material.Typography, {
     variant: "subtitle1"
-  }, title)), /*#__PURE__*/React.createElement(_material.Box, null, /*#__PURE__*/React.createElement(_material.IconButton, {
+  }, title)), /*#__PURE__*/_react["default"].createElement(_material.Box, null, /*#__PURE__*/_react["default"].createElement(_material.IconButton, {
     size: "small",
     onClick: handleClose
-  }, /*#__PURE__*/React.createElement(_iconsMaterial.Close, null))))), /*#__PURE__*/React.createElement(_material.DialogContent, null, subtitle && /*#__PURE__*/React.createElement(_material.Typography, {
+  }, /*#__PURE__*/_react["default"].createElement(_iconsMaterial.Close, null))))), /*#__PURE__*/_react["default"].createElement(_material.DialogContent, null, subtitle && /*#__PURE__*/_react["default"].createElement(_material.Typography, {
     variant: "body1"
-  }, subtitle), children), buttons && /*#__PURE__*/React.createElement(_material.DialogActions, null, buttons));
+  }, subtitle), children), buttons && /*#__PURE__*/_react["default"].createElement(_material.DialogActions, null, buttons));
 };
 
 Modal.propTypes = {

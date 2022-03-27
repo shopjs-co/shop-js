@@ -5,6 +5,8 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports["default"] = void 0;
 
+var _react = _interopRequireDefault(require("react"));
+
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _material = require("@mui/material");
@@ -41,29 +43,29 @@ var QuantitySelector = function QuantitySelector(_ref) {
     return handleChange(quantity - 1);
   };
 
-  return /*#__PURE__*/React.createElement(_material.Box, {
+  return /*#__PURE__*/_react["default"].createElement(_material.Box, {
     sx: _objectSpread(_objectSpread({}, sx.root), styles)
-  }, /*#__PURE__*/React.createElement(_material.ButtonGroup, {
+  }, /*#__PURE__*/_react["default"].createElement(_material.ButtonGroup, {
     sx: _objectSpread(_objectSpread({}, sx.buttonGroup), {}, {
       height: small ? 32 : 54
     })
-  }, /*#__PURE__*/React.createElement(_material.Button, {
+  }, /*#__PURE__*/_react["default"].createElement(_material.Button, {
     sx: _objectSpread(_objectSpread({}, sx.button), {}, {
       height: small ? 32 : 54,
       minHeight: small ? 32 : 54
     }),
     onClick: removeQuantity
-  }, /*#__PURE__*/React.createElement(_iconsMaterial.Remove, {
+  }, /*#__PURE__*/_react["default"].createElement(_iconsMaterial.Remove, {
     sx: sx.icon
-  })), /*#__PURE__*/React.createElement(_material.Button, {
+  })), /*#__PURE__*/_react["default"].createElement(_material.Button, {
     sx: sx.button,
     onClick: function onClick() {
       return null;
     }
-  }, quantity), /*#__PURE__*/React.createElement(_material.Button, {
+  }, quantity), /*#__PURE__*/_react["default"].createElement(_material.Button, {
     sx: sx.button,
     onClick: addQuantity
-  }, /*#__PURE__*/React.createElement(_iconsMaterial.Add, {
+  }, /*#__PURE__*/_react["default"].createElement(_iconsMaterial.Add, {
     sx: sx.icon
   }))));
 };

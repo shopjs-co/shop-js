@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import useResponsive from '../../hooks/useResponsive'
 import ImageCarousel from '../images/ImageCarousel'
