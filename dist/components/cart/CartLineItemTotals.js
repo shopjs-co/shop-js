@@ -11,7 +11,7 @@ var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _material = require("@mui/material");
 
-var _utils = require("utils");
+var _utils = require("../../utils");
 
 var _CartLineItemPrice = _interopRequireDefault(require("./CartLineItemPrice"));
 

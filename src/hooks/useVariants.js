@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react'
-import { formatCurrency } from 'utils'
+import { formatCurrency } from '../utils'
 
 const useVariants = ({ product, selectedOptions }) => {
 

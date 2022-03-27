@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Box } from '@mui/material';
-import { formatCurrency } from 'utils'
+import { formatCurrency } from '../../utils'
 import CartLineItemPrice from './CartLineItemPrice'
 import useCheckout from '../../hooks/useCheckout'
 

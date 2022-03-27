@@ -15,7 +15,7 @@ var _material = require("@mui/material");
 
 var _LineItemSkeleton = _interopRequireDefault(require("../skeletons/LineItemSkeleton"));
 
-var _utils = require("utils");
+var _utils = require("../../utils");
 
 var _iconsMaterial = require("@mui/icons-material");
 

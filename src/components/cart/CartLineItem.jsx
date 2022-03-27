@@ -12,7 +12,7 @@ import {
   Typography,
 } from '@mui/material';
 import LineItemSkeleton from '../skeletons/LineItemSkeleton'
-import { formatCurrency, resizeImage } from 'utils'
+import { formatCurrency, resizeImage } from '../../utils'
 import { Close } from '@mui/icons-material'
 
 const CartLineItem = ({

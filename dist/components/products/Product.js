@@ -17,7 +17,7 @@ var _Image = _interopRequireDefault(require("../images/Image"));
 
 var _image = _interopRequireDefault(require("../../assets/image.svg"));
 
-var _utils = require("utils");
+var _utils = require("../../utils");
 
 var _excluded = ["styles", "product"];
 
