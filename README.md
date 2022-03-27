@@ -12,5 +12,5 @@ npm i @shopjs/core
 Install dependency:
 ```
 npm i react-multi-carousel
-import react-multi-carousel/lib/styles.css
+import 'react-multi-carousel/lib/styles.css'
 ```

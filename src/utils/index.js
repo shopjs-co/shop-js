@@ -1,8 +1,12 @@
+
 export const resizeImage = (url, height, width) => {
-  if(!url) return; 
-  let extension = url.split('.').pop()
-  let filePath = url.split(`.${extension}`)[0]
-  let resizedUrl = `${filePath}_${width}x${height}.${extension}`
+  if(!url) return;   
+  let resizedUrl = url
+  if(url.test(/cdn.shopify.com/)){
+    let extension = url.split('.').pop()
+    let filePath = url.split(`.${extension}`)[0]
+    resizedSrc = `${filePath}_${width}x${height}.${extension}`    
+  }    
   return resizedUrl
 }
 

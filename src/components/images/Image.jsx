@@ -1,34 +1,24 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { resizeImage } from '../../utls'
 
-const NextImage = ({ src, width=640, height=640, objectFit='cover', alt }) => {
-
-  const fastlyLoader = ({ src, width, quality }) => {
-    let extension = src.split('.').pop()
-    let filePath = src.split(`.${extension}`)[0]
-    let resizedUrl = `${filePath}_${width}x${height}.${extension}`
-    return resizedUrl
-  }
-
+const ResponsiveImage = ({ src, alt, ...rest }) => {
   return (
-    <img
-      src={src}
-      alt={alt}
-      width={width}
-      height={height}
-      style={{
-        objectFit: objectFit
-      }}
-    />
+    <img src={resizeImage(src)}  alt={alt}  style={ styles.image } { ...rest } />
   )
 }
 
-NextImage.propTypes = {
+ResponsiveImage.propTypes = {
   src: PropTypes.string.isRequired,
   width: PropTypes.number,
   height: PropTypes.number,
   alt: PropTypes.string,
-  objectFit: PropTypes.string
 }
 
-export default NextImage
+export default ResponsiveImage
+
+const styles = {
+  width: '100%',
+  height: 'auto',
+  objectFit: 'cover'
+}
