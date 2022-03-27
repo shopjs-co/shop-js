@@ -1,19 +1,16 @@
 import React, { useState } from 'react'
 import ShopContext from './ShopContext'
-import { 
-  ApolloProvider, 
-  useApolloClient 
-} from '@apollo/client'
+import { ApolloProvider } from '@apollo/client'
+import { useApollo } from '../apollo/client'
 
 const ShopProvider = ({ 
-      children, 
-      shopifyStorefrontToken, 
-      shopifyDomain,      
-      ...rest 
-    }) => {
+    children, 
+    shopifyStorefrontToken, 
+    shopifyDomain,      
+    ...rest 
+  }) => {
 
-
-  const apolloClient = useApolloClient({
+  const apolloClient = useApollo({
     shopifyDomain,
     shopifyStorefrontToken
   })

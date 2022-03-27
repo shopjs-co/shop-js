@@ -13,6 +13,8 @@ var _ShopContext = _interopRequireDefault(require("./ShopContext"));
 
 var _client = require("@apollo/client");
 
+var _client2 = require("../apollo/client");
+
 var _excluded = ["children", "shopifyStorefrontToken", "shopifyDomain"];
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
@@ -43,7 +45,7 @@ var ShopProvider = function ShopProvider(_ref) {
       shopifyDomain = _ref.shopifyDomain,
       rest = _objectWithoutProperties(_ref, _excluded);
 
-  var apolloClient = (0, _client.useApolloClient)({
+  var apolloClient = (0, _client2.useApollo)({
     shopifyDomain: shopifyDomain,
     shopifyStorefrontToken: shopifyStorefrontToken
   });

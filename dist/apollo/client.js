@@ -5,7 +5,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.addApolloState = addApolloState;
 exports.initApollo = initApollo;
-exports.useApolloClient = useApolloClient;
+exports.useApollo = useApollo;
 
 var _react = require("react");
 
@@ -72,7 +72,7 @@ function addApolloState(client, pageProps) {
   return pageProps;
 }
 
-function useApolloClient(initialState) {
+function useApollo(initialState) {
   var store = (0, _react.useMemo)(function () {
     return initApollo(initialState);
   }, [initialState]);
