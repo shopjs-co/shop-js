@@ -43,7 +43,7 @@ var ShopProvider = function ShopProvider(_ref) {
       shopifyDomain = _ref.shopifyDomain,
       rest = _objectWithoutProperties(_ref, _excluded);
 
-  var apolloClient = (0, _client.useApollo)({
+  var apolloClient = (0, _client.useApolloClient)({
     shopifyDomain: shopifyDomain,
     shopifyStorefrontToken: shopifyStorefrontToken
   });
