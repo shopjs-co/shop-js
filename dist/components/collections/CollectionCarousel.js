@@ -23,8 +23,6 @@ var _reactMultiCarousel = _interopRequireDefault(require("react-multi-carousel")
 
 var _shopConfig = require("../../shop-config");
 
-require("react-multi-carousel/lib/styles.css");
-
 var _excluded = ["collections", "loading", "autoPlay", "swipeable", "draggable", "showDots", "perPage"];
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
