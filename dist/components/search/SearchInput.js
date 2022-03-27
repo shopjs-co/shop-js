@@ -15,7 +15,7 @@ var _material = require("@mui/material");
 
 var _iconsMaterial = require("@mui/icons-material");
 
-var _searchIcon = _interopRequireDefault(require("../../assets/search-icon.svg"));
+var _sx;
 
 var _excluded = ["value", "handleChange", "handleSearch", "handleKeyPress", "handleClear"];
 
@@ -72,8 +72,8 @@ function SearchInput(_ref) {
     sx: sx.root
   }, /*#__PURE__*/_react["default"].createElement("span", {
     style: sx.searchIcon
-  }, /*#__PURE__*/_react["default"].createElement("img", {
-    src: _searchIcon["default"]
+  }, /*#__PURE__*/_react["default"].createElement(_iconsMaterial.Search, {
+    sx: sx.icon
   })), /*#__PURE__*/_react["default"].createElement(_material.Input, {
     name: "keywords",
     value: value,
@@ -103,7 +103,7 @@ SearchInput.propTypes = {
 };
 var _default = SearchInput;
 exports["default"] = _default;
-var sx = {
+var sx = (_sx = {
   root: {
     height: 42,
     py: 0,
@@ -136,19 +136,20 @@ var sx = {
   active: {
     width: 200
   },
+  icon: {
+    color: 'icon'
+  },
   searchIcon: {
     mr: 1,
     color: 'icon'
-  },
-  icon: {
-    height: 20,
-    width: 20
-  },
-  button: {
-    ml: 2,
-    display: {
-      md: 'none',
-      lg: 'block'
-    }
   }
-};
+}, _defineProperty(_sx, "icon", {
+  height: 20,
+  width: 20
+}), _defineProperty(_sx, "button", {
+  ml: 2,
+  display: {
+    md: 'none',
+    lg: 'block'
+  }
+}), _sx);

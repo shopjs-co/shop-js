@@ -13,8 +13,6 @@ var _material = require("@mui/material");
 
 var _Image = _interopRequireDefault(require("../images/Image"));
 
-var _image = _interopRequireDefault(require("../../assets/image.svg"));
-
 var _utils = require("../../utils");
 
 var _moment = _interopRequireDefault(require("moment"));
@@ -45,7 +43,7 @@ var Order = function Order(_ref) {
   }, /*#__PURE__*/_react["default"].createElement(_Image["default"], {
     alt: order === null || order === void 0 ? void 0 : order.name,
     layout: "fill",
-    src: (order === null || order === void 0 ? void 0 : (_order$lineItems = order.lineItems) === null || _order$lineItems === void 0 ? void 0 : (_order$lineItems$edge = _order$lineItems.edges[0]) === null || _order$lineItems$edge === void 0 ? void 0 : (_order$lineItems$edge2 = _order$lineItems$edge.node) === null || _order$lineItems$edge2 === void 0 ? void 0 : (_order$lineItems$edge3 = _order$lineItems$edge2.variant) === null || _order$lineItems$edge3 === void 0 ? void 0 : (_order$lineItems$edge4 = _order$lineItems$edge3.image) === null || _order$lineItems$edge4 === void 0 ? void 0 : _order$lineItems$edge4.src) || _image["default"]
+    src: order === null || order === void 0 ? void 0 : (_order$lineItems = order.lineItems) === null || _order$lineItems === void 0 ? void 0 : (_order$lineItems$edge = _order$lineItems.edges[0]) === null || _order$lineItems$edge === void 0 ? void 0 : (_order$lineItems$edge2 = _order$lineItems$edge.node) === null || _order$lineItems$edge2 === void 0 ? void 0 : (_order$lineItems$edge3 = _order$lineItems$edge2.variant) === null || _order$lineItems$edge3 === void 0 ? void 0 : (_order$lineItems$edge4 = _order$lineItems$edge3.image) === null || _order$lineItems$edge4 === void 0 ? void 0 : _order$lineItems$edge4.src
   })), /*#__PURE__*/_react["default"].createElement(_material.Box, {
     py: 1,
     px: 1

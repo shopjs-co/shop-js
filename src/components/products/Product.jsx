@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 import { useRouter } from 'next/router'
 import { Button, Box, Typography } from '@mui/material';
 import Image from '../images/Image'
-import EmptyImage from '../../assets/image.svg'
 import { formatCurrency } from '../../utils'
 
 const Product = ({

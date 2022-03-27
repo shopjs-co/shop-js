@@ -15,8 +15,6 @@ var _material = require("@mui/material");
 
 var _Image = _interopRequireDefault(require("../images/Image"));
 
-var _image = _interopRequireDefault(require("../../assets/image.svg"));
-
 var _utils = require("../../utils");
 
 var _excluded = ["styles", "product"];
@@ -48,7 +46,7 @@ var Product = function Product(_ref) {
   }, /*#__PURE__*/_react["default"].createElement(_Image["default"], {
     alt: product.title,
     layout: "fill",
-    src: (product === null || product === void 0 ? void 0 : (_product$images = product.images) === null || _product$images === void 0 ? void 0 : (_product$images$edges = _product$images.edges[0]) === null || _product$images$edges === void 0 ? void 0 : (_product$images$edges2 = _product$images$edges.node) === null || _product$images$edges2 === void 0 ? void 0 : _product$images$edges2.src) || _image["default"]
+    src: (product === null || product === void 0 ? void 0 : (_product$images = product.images) === null || _product$images === void 0 ? void 0 : (_product$images$edges = _product$images.edges[0]) === null || _product$images$edges === void 0 ? void 0 : (_product$images$edges2 = _product$images$edges.node) === null || _product$images$edges2 === void 0 ? void 0 : _product$images$edges2.src) || EmptyImage
   })), /*#__PURE__*/_react["default"].createElement(_material.Box, {
     py: 1,
     px: 1

@@ -7,8 +7,8 @@ import {
 } from '@mui/material';
 import {
   Clear,
+  Search
 } from '@mui/icons-material'
-import SearchIcon from '../../assets/search-icon.svg'
 
 function SearchInput({
   value,
@@ -29,7 +29,7 @@ function SearchInput({
         sx={ sx.root }
       >
         <span style={ sx.searchIcon }>
-          <img src={ SearchIcon } />
+          <Search sx={sx.icon } />
         </span>
         <Input
           name='keywords'
@@ -100,6 +100,9 @@ const sx = {
   },
   active: {
     width: 200
+  },
+  icon: {
+    color: 'icon'
   },
   searchIcon: {
     mr: 1,

@@ -15,8 +15,6 @@ var _material = require("@mui/material");
 
 var _Image = _interopRequireDefault(require("../images/Image"));
 
-var _image = _interopRequireDefault(require("../../assets/image.svg"));
-
 var _excluded = ["styles", "collection"];
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
@@ -45,7 +43,7 @@ var Collection = function Collection(_ref) {
     onClick: handleClick
   }, /*#__PURE__*/_react["default"].createElement(_Image["default"], {
     layout: "fill",
-    src: (collection === null || collection === void 0 ? void 0 : (_collection$image = collection.image) === null || _collection$image === void 0 ? void 0 : _collection$image.originalSrc) || _image["default"],
+    src: collection === null || collection === void 0 ? void 0 : (_collection$image = collection.image) === null || _collection$image === void 0 ? void 0 : _collection$image.originalSrc,
     alt: collection.title
   })), /*#__PURE__*/_react["default"].createElement(_material.Box, {
     py: 2,

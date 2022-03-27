@@ -2,7 +2,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Button, Box, Typography } from '@mui/material';
 import Image from '../images/Image'
-import EmptyImage from '../../assets/image.svg'
 import { formatCurrency } from '../../utils'
 import moment from 'moment'
 
@@ -23,7 +22,7 @@ const Order = ({
           <Image
             alt={ order?.name }
             layout='fill'
-            src={ order?.lineItems?.edges[0]?.node?.variant?.image?.src || EmptyImage }
+            src={ order?.lineItems?.edges[0]?.node?.variant?.image?.src }
           />
         </Button>
         <Box py={1} px={1}>

@@ -4,10 +4,10 @@ import {
   Box,
   Container
 } from '@mui/material';
-import Logo from '../assets/logo.svg'
 
 const Footer = ({
     styles,
+    logo: Logo,
     ...props
   }) => {
 

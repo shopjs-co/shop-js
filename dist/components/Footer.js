@@ -11,9 +11,7 @@ var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _material = require("@mui/material");
 
-var _logo = _interopRequireDefault(require("../assets/logo.svg"));
-
-var _excluded = ["styles"];
+var _excluded = ["styles", "logo"];
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -29,6 +27,7 @@ function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) r
 
 var Footer = function Footer(_ref) {
   var styles = _ref.styles,
+      Logo = _ref.logo,
       props = _objectWithoutProperties(_ref, _excluded);
 
   return /*#__PURE__*/_react["default"].createElement(_material.Box, {
@@ -36,7 +35,7 @@ var Footer = function Footer(_ref) {
   }, /*#__PURE__*/_react["default"].createElement(_material.Container, {
     maxWidth: "lg"
   }, /*#__PURE__*/_react["default"].createElement("img", {
-    src: _logo["default"]
+    src: Logo
   })));
 };
 
