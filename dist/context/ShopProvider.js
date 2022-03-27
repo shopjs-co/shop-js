@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.ShopProvider = void 0;
+exports["default"] = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
@@ -160,4 +160,5 @@ var ShopProvider = function ShopProvider(_ref) {
   }, children));
 };
 
-exports.ShopProvider = ShopProvider;
+var _default = ShopProvider;
+exports["default"] = _default;

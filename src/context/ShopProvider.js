@@ -3,7 +3,7 @@ import ShopContext from './ShopContext'
 import { ApolloProvider } from '@apollo/client'
 import { useApollo } from 'apollo/client'
 
-export const ShopProvider = ({ 
+const ShopProvider = ({ 
       children, 
       shopifyStorefrontToken, 
       shopifyDomain,      
@@ -82,3 +82,5 @@ export const ShopProvider = ({
     </ShopContext.Provider>
   )
 }
+
+export default ShopProvider
