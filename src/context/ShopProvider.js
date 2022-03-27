@@ -3,9 +3,18 @@ import ShopContext from './ShopContext'
 import { ApolloProvider } from '@apollo/client'
 import { useApollo } from 'apollo/client'
 
-export const ShopProvider = ({ children, ...rest }) => {
+export const ShopProvider = ({ 
+      children, 
+      shopifyStorefrontToken, 
+      shopifyDomain,      
+      ...rest 
+    }) => {
 
-  const apolloClient = useApollo()
+
+  const apolloClient = useApollo({
+    shopifyDomain,
+    shopifyStorefrontToken
+  })
 
   const [accessToken, setAccessToken] = useState()
   const [alert, setAlert] = useState()
@@ -54,6 +63,9 @@ export const ShopProvider = ({ children, ...rest }) => {
     setCheckout,
     lineItemTotal,
     setLineItemTotal,
+    
+    shopifyDomain,
+    shopifyStorefrontToken,
 
     products,
     setProducts,

@@ -7,7 +7,6 @@ import CarouselLeftArrow from '../carousels/CarouselLeftArrow'
 import Collection from './Collection'
 import CollectionSkeleton from '../skeletons/CollectionSkeleton'
 import Carousel from 'react-multi-carousel'
-import { responsive } from '../../shop-config'
 
 const CollectionCarousel = ({
     collections,
@@ -20,7 +19,7 @@ const CollectionCarousel = ({
     ...props
   }) => {
 
-  const { itemsPerCarousel } = useResponsive()
+  const { responsive, itemsPerCarousel } = useResponsive()
 
 
   return (

@@ -2,23 +2,19 @@ import { useMemo } from 'react'
 import { ApolloClient, InMemoryCache } from '@apollo/client'
 import { createHttpLink } from 'apollo-link-http';
 import { setContext } from 'apollo-link-context';
-import {
-  SHOPIFY_DOMAIN,
-  SHOPIFY_STOREFRONT_TOKEN
-} from 'shop-config.js'
 
 let apolloClient
 
-function createApolloClient() {
+function createApolloClient({ shopifyDomain, shopifyStorefontToken }) {
 
   const httpLink = createHttpLink({
-    uri: `https://${SHOPIFY_DOMAIN}/api/2020-10/graphql.json`
+    uri: `https://${shopifyDomain}/api/2020-10/graphql.json`
   })
 
   const middlewareLink = setContext(() => ({
     headers: {
       'Content-Type': 'application/graphql',
-      'X-Shopify-Storefront-Access-Token': SHOPIFY_STOREFRONT_TOKEN
+      'X-Shopify-Storefront-Access-Token': shopifyStorefontToken
     }
   }))
 
@@ -29,7 +25,8 @@ function createApolloClient() {
 }
 
 export function initApollo(initialState = null) {
-  const _apolloClient = apolloClient ?? createApolloClient()
+  const { shopifyDomain, shopifyStorefontToken } = initialState
+  const _apolloClient = apolloClient ?? createApolloClient({ shopifyDomain, shopifyStorefontToken })
 
   // If your page has Next.js data fetching methods that use Apollo Client, the initial state
   // gets hydrated here

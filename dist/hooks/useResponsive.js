@@ -13,8 +13,6 @@ var _styles = require("@mui/material/styles");
 
 var _useMediaQuery = _interopRequireDefault(require("@mui/material/useMediaQuery"));
 
-var _shopConfig = require("../shop-config");
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
@@ -36,6 +34,40 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
 var DEFAULT_ITEMS = 2;
+var responsive = {
+  superLargeDesktop: {
+    breakpoint: {
+      max: 4000,
+      min: 1280
+    },
+    items: 3,
+    partialVisibilityGutter: 50
+  },
+  desktop: {
+    breakpoint: {
+      max: 1280,
+      min: 960
+    },
+    items: 3,
+    partialVisibilityGutter: 40
+  },
+  tablet: {
+    breakpoint: {
+      max: 960,
+      min: 600
+    },
+    items: 2,
+    partialVisibilityGutter: 30
+  },
+  mobile: {
+    breakpoint: {
+      max: 600,
+      min: 0
+    },
+    items: 1,
+    partialVisibilityGutter: 20
+  }
+};
 var BREAKPOINTS = {
   sm: 600,
   md: 960,
@@ -96,7 +128,7 @@ var useResponsive = function useResponsive(_ref) {
   };
 
   (0, _react.useEffect)(function () {
-    var numItems = _shopConfig.responsive[breakpoint].items || DEFAULT_ITEMS;
+    var numItems = responsive[breakpoint].items || DEFAULT_ITEMS;
     setItemsPerCarousel(numItems);
     setItemWidth(parseInt(breakpointWidth / itemsPerCarousel));
   }, [breakpointWidth, itemsPerCarousel]);
@@ -110,7 +142,8 @@ var useResponsive = function useResponsive(_ref) {
     isMobile: isMobile,
     isTablet: isTablet,
     isDesktop: isDesktop,
-    isSuperLargeDesktop: isSuperLargeDesktop
+    isSuperLargeDesktop: isSuperLargeDesktop,
+    responsive: responsive
   };
 };
 

@@ -15,19 +15,19 @@ var _apolloLinkHttp = require("apollo-link-http");
 
 var _apolloLinkContext = require("apollo-link-context");
 
-var _shopConfig = require("shop-config.js");
-
 var apolloClient;
 
-function createApolloClient() {
+function createApolloClient(_ref) {
+  var shopifyDomain = _ref.shopifyDomain,
+      shopifyStorefontToken = _ref.shopifyStorefontToken;
   var httpLink = (0, _apolloLinkHttp.createHttpLink)({
-    uri: "https://".concat(_shopConfig.SHOPIFY_DOMAIN, "/api/2020-10/graphql.json")
+    uri: "https://".concat(shopifyDomain, "/api/2020-10/graphql.json")
   });
   var middlewareLink = (0, _apolloLinkContext.setContext)(function () {
     return {
       headers: {
         'Content-Type': 'application/graphql',
-        'X-Shopify-Storefront-Access-Token': _shopConfig.SHOPIFY_STOREFRONT_TOKEN
+        'X-Shopify-Storefront-Access-Token': shopifyStorefontToken
       }
     };
   });
@@ -41,8 +41,13 @@ function initApollo() {
   var _apolloClient2;
 
   var initialState = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
+  var shopifyDomain = initialState.shopifyDomain,
+      shopifyStorefontToken = initialState.shopifyStorefontToken;
 
-  var _apolloClient = (_apolloClient2 = apolloClient) !== null && _apolloClient2 !== void 0 ? _apolloClient2 : createApolloClient(); // If your page has Next.js data fetching methods that use Apollo Client, the initial state
+  var _apolloClient = (_apolloClient2 = apolloClient) !== null && _apolloClient2 !== void 0 ? _apolloClient2 : createApolloClient({
+    shopifyDomain: shopifyDomain,
+    shopifyStorefontToken: shopifyStorefontToken
+  }); // If your page has Next.js data fetching methods that use Apollo Client, the initial state
   // gets hydrated here
 
 

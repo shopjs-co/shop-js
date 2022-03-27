@@ -13,7 +13,7 @@ var _client = require("@apollo/client");
 
 var _client2 = require("apollo/client");
 
-var _excluded = ["children"];
+var _excluded = ["children", "shopifyStorefrontToken", "shopifyDomain"];
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -35,9 +35,14 @@ function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) r
 
 var ShopProvider = function ShopProvider(_ref) {
   var children = _ref.children,
+      shopifyStorefrontToken = _ref.shopifyStorefrontToken,
+      shopifyDomain = _ref.shopifyDomain,
       rest = _objectWithoutProperties(_ref, _excluded);
 
-  var apolloClient = (0, _client2.useApollo)();
+  var apolloClient = (0, _client2.useApollo)({
+    shopifyDomain: shopifyDomain,
+    shopifyStorefrontToken: shopifyStorefrontToken
+  });
 
   var _useState = useState(),
       _useState2 = _slicedToArray(_useState, 2),
@@ -141,6 +146,8 @@ var ShopProvider = function ShopProvider(_ref) {
     setCheckout: setCheckout,
     lineItemTotal: lineItemTotal,
     setLineItemTotal: setLineItemTotal,
+    shopifyDomain: shopifyDomain,
+    shopifyStorefrontToken: shopifyStorefrontToken,
     products: products,
     setProducts: setProducts,
     collections: collections,

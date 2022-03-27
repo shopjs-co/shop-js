@@ -7,7 +7,6 @@ import CarouselLeftArrow from '../carousels/CarouselLeftArrow'
 import Product from './Product'
 import ProductSkeleton from '../skeletons/ProductSkeleton'
 import Carousel from 'react-multi-carousel'
-import { responsive } from '../../shop-config'
 
 const ProductCarousel = ({
     products,
@@ -17,21 +16,21 @@ const ProductCarousel = ({
     showDots=false,
     styles
   }) => {
-
-  const { itemsPerCarousel } = useResponsive()
+  
+  const { responsive, itemsPerCarousel } = useResponsive()
 
   return (
     <Box sx={{ ...sx.root, ...styles } }>
       { products ?
         <Carousel
+          ssr
+          infinite
+          keyBoardControl
           swipeable={swipeable}
           draggable={draggable}
           showDots={showDots}
-          responsive={responsive}
-          ssr={true}
-          infinite={true}
-          autoPlay={autoPlay}
-          keyBoardControl={true}
+          responsive={responsive}          
+          autoPlay={autoPlay}          
           customLeftArrow={ <CarouselLeftArrow /> }
           customRightArrow={ <CarouselRightArrow />}
           slidesToSlide={itemsPerCarousel}

@@ -1,9 +1,32 @@
 import React, { useState, useEffect, useLayoutEffect } from 'react'
 import { useTheme } from '@mui/material/styles'
 import useMediaQuery from '@mui/material/useMediaQuery'
-import { responsive } from '../shop-config'
 
 const DEFAULT_ITEMS = 2
+
+const responsive = {
+  superLargeDesktop: {
+    breakpoint: { max: 4000, min: 1280 },
+    items: 3,
+    partialVisibilityGutter: 50
+  },
+  desktop: {
+    breakpoint: { max: 1280, min: 960 },
+    items: 3,
+    partialVisibilityGutter: 40
+  },
+  tablet: {
+    breakpoint: { max: 960, min: 600 },
+    items: 2,
+    partialVisibilityGutter: 30
+  },
+  mobile: {
+    breakpoint: { max: 600, min: 0 },
+    items: 1,
+    partialVisibilityGutter: 20
+  }
+};
+
 
 const BREAKPOINTS = {
   sm: 600,
@@ -63,6 +86,7 @@ const useResponsive = ({ ...props }) => {
     isTablet,
     isDesktop,
     isSuperLargeDesktop,
+    responsive
   }
 }
 

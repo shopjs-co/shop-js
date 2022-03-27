@@ -8,7 +8,6 @@ import Image from '../images/Image'
 import {
   FiberManualRecord
 } from '@mui/icons-material'
-import { responsive } from '../../shop-config'
 import Carousel from 'react-multi-carousel'
 
 const ImageCarousel = ({

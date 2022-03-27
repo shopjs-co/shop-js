@@ -19,8 +19,6 @@ var _Image = _interopRequireDefault(require("../images/Image"));
 
 var _iconsMaterial = require("@mui/icons-material");
 
-var _shopConfig = require("../../shop-config");
-
 var _reactMultiCarousel = _interopRequireDefault(require("react-multi-carousel"));
 
 var _excluded = ["images", "loading", "onClick", "itemWidth", "itemHeight", "numSkeletons", "xs", "sm", "md", "lg"],
@@ -81,7 +79,7 @@ var ImageCarousel = function ImageCarousel(_ref) {
   }, images && /*#__PURE__*/_react["default"].createElement(_reactMultiCarousel["default"], {
     swipeable: true,
     draggable: true,
-    responsive: _objectSpread({}, _shopConfig.responsive),
+    responsive: _objectSpread({}, responsive),
     infinite: true,
     autoPlay: false,
     keyBoardControl: true,

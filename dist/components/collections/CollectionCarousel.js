@@ -23,8 +23,6 @@ var _CollectionSkeleton = _interopRequireDefault(require("../skeletons/Collectio
 
 var _reactMultiCarousel = _interopRequireDefault(require("react-multi-carousel"));
 
-var _shopConfig = require("../../shop-config");
-
 var _excluded = ["collections", "loading", "autoPlay", "swipeable", "draggable", "showDots", "perPage"];
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
@@ -61,6 +59,7 @@ var CollectionCarousel = function CollectionCarousel(_ref) {
       props = _objectWithoutProperties(_ref, _excluded);
 
   var _useResponsive = (0, _useResponsive2["default"])(),
+      responsive = _useResponsive.responsive,
       itemsPerCarousel = _useResponsive.itemsPerCarousel;
 
   return /*#__PURE__*/_react["default"].createElement(_material.Box, {
@@ -69,7 +68,7 @@ var CollectionCarousel = function CollectionCarousel(_ref) {
     swipeable: swipeable,
     draggable: draggable,
     showDots: showDots,
-    responsive: _shopConfig.responsive,
+    responsive: responsive,
     ssr: true,
     infinite: true,
     autoPlay: autoPlay,

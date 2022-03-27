@@ -23,8 +23,6 @@ var _ProductSkeleton = _interopRequireDefault(require("../skeletons/ProductSkele
 
 var _reactMultiCarousel = _interopRequireDefault(require("react-multi-carousel"));
 
-var _shopConfig = require("../../shop-config");
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
@@ -58,19 +56,20 @@ var ProductCarousel = function ProductCarousel(_ref) {
       styles = _ref.styles;
 
   var _useResponsive = (0, _useResponsive2["default"])(),
+      responsive = _useResponsive.responsive,
       itemsPerCarousel = _useResponsive.itemsPerCarousel;
 
   return /*#__PURE__*/_react["default"].createElement(_material.Box, {
     sx: _objectSpread(_objectSpread({}, sx.root), styles)
   }, products ? /*#__PURE__*/_react["default"].createElement(_reactMultiCarousel["default"], {
+    ssr: true,
+    infinite: true,
+    keyBoardControl: true,
     swipeable: swipeable,
     draggable: draggable,
     showDots: showDots,
-    responsive: _shopConfig.responsive,
-    ssr: true,
-    infinite: true,
+    responsive: responsive,
     autoPlay: autoPlay,
-    keyBoardControl: true,
     customLeftArrow: /*#__PURE__*/_react["default"].createElement(_CarouselLeftArrow["default"], null),
     customRightArrow: /*#__PURE__*/_react["default"].createElement(_CarouselRightArrow["default"], null),
     slidesToSlide: itemsPerCarousel
