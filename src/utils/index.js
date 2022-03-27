@@ -1,6 +1,8 @@
 
 export const resizeImage = (url, width=640, height=480) => {
-  if(!url) return;   
+  if(!url){
+    return "https://cdn.shopify.com/s/files/1/0533/2089/files/placeholder-images-image_large.png"
+  }
   let isShopify = /(cdn\.shopify\.com)/i.test(url)
   let resizedUrl = url
   if(isShopify){
