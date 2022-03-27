@@ -8,7 +8,6 @@ import Collection from './Collection'
 import CollectionSkeleton from '../skeletons/CollectionSkeleton'
 import Carousel from 'react-multi-carousel'
 import { responsive } from '../../shop-config'
-import 'react-multi-carousel/lib/styles.css';
 
 const CollectionCarousel = ({
     collections,
