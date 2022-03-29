@@ -9,6 +9,7 @@ import ProductSkeleton from '../skeletons/ProductSkeleton'
 const ProductGrid = ({
     products,
     loading,
+    handleClick,
     xs=12,
     sm=6,
     md=4,
@@ -23,6 +24,7 @@ const ProductGrid = ({
         <Grid item xs={xs} sm={sm} md={md} lg={lg} key={product.id}>
           <Product
             product={ product }
+            handleClick={ handleClick }
           />
         </Grid>
       )) :
@@ -39,6 +41,7 @@ const ProductGrid = ({
 ProductGrid.propTypes = {
   products: PropTypes.array,
   loading: PropTypes.bool,
+  handleClick: PropTypes.func,
   xs: PropTypes.number,
   sm: PropTypes.number,
   md: PropTypes.number,

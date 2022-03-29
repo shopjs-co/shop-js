@@ -7,6 +7,7 @@ import CollectionSkeleton from '../skeletons/CollectionSkeleton'
 const CollectionGrid = ({
     collections,
     loading,
+    handleClick,
     xs=12,
     sm=6,
     md=4,
@@ -21,6 +22,7 @@ const CollectionGrid = ({
         <Grid item xs={xs} sm={sm} md={md} lg={lg} key={collection.id}>
           <Collection
             collection={ collection }
+            handleClick={ handleClick }
           />
         </Grid>
       )) :
@@ -37,6 +39,7 @@ const CollectionGrid = ({
 CollectionGrid.propTypes = {
   collections: PropTypes.array,
   loading: PropTypes.bool,
+  handleClick: PropTypes.func,
   xs: PropTypes.number,
   sm: PropTypes.number,
   md: PropTypes.number,

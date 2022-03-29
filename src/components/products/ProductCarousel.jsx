@@ -39,6 +39,7 @@ const ProductCarousel = ({
             <Product
               key={product.id}
               product={ product }
+              handleClick={ handleClick }
             />
           ))}
         </Carousel>
@@ -59,6 +60,7 @@ const ProductCarousel = ({
 ProductCarousel.propTypes = {
   products: PropTypes.array,
   loading: PropTypes.bool,
+  handleClick: PropTypes.func,
   styles: PropTypes.object,
   swipeable: PropTypes.bool,
   draggable: PropTypes.bool,

@@ -16,7 +16,7 @@ const Collection = ({
       <Box sx={ sx.root }>
         <Button
           sx={ sx.button  }
-          onClick={ handleClick }
+          onClick={handleClick ? () => handleClick(collection) : null}
         >
           <Image
             layout='fill'
@@ -38,6 +38,7 @@ const Collection = ({
 
 Collection.propTypes = {
   styles: PropTypes.object,
+  handleClick: PropTypes.func,
   collection: PropTypes.object.isRequired,
 };
 

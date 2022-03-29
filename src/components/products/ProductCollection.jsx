@@ -6,6 +6,7 @@ import ProductGrid from './ProductGrid'
 import { Box } from '@mui/material'
 
 const ProductCollection = ({
+    handleClick,
     collectionHandle,
     perPage=20,
     variant='carousel',
@@ -31,6 +32,7 @@ const ProductCollection = ({
           title={ collection?.title }
           loading={ loading }
           products={ products }
+          handleClick={ handleClick }
         />
       }
       { variant == 'grid' &&
@@ -38,6 +40,7 @@ const ProductCollection = ({
           title={ collection?.title }
           loading={ loading }
           products={ products }
+          handleClick={ handleClick }
         />
       }
     </Box> 
@@ -49,6 +52,7 @@ ProductCollection.propTypes = {
   products: PropTypes.array,
   variant: PropTypes.oneOf(['carousel','grid']),
   query: PropTypes.string,
+  handleClick: PropTypes.func,
   styles: PropTypes.object,
 }
 

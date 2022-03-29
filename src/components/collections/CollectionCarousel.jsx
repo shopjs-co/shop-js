@@ -11,6 +11,7 @@ import Carousel from 'react-multi-carousel'
 const CollectionCarousel = ({
     collections,
     loading,
+    handleClick,
     autoPlay=false,
     swipeable=false,
     draggable=false,
@@ -44,6 +45,7 @@ const CollectionCarousel = ({
             <Collection
               key={collection.id}
               collection={ collection }
+              handleClick={ handleClick }
             />
           ))}
         </Carousel> :
@@ -63,6 +65,7 @@ const CollectionCarousel = ({
 CollectionCarousel.propTypes = {
   collections: PropTypes.array,
   loading: PropTypes.bool,
+  handleClick: PropTypes.func,
   styles: PropTypes.object,
   autoPlay: PropTypes.bool,
   swipeable: PropTypes.bool,

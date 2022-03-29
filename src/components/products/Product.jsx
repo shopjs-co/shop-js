@@ -16,7 +16,7 @@ const Product = ({
       <Box sx={ sx.root }>
         <Button
           sx={ sx.button  }
-          onClick={ handleClick }
+          onClick={handleClick ? () => handleClick(collection) : null}
         >
           <Image
             alt={ product.title }
@@ -48,6 +48,7 @@ export default Product
 
 Product.propTypes = {
   styles: PropTypes.object,
+  handleClick: PropTypes.func,
   product: PropTypes.object.isRequired,
 };
 

@@ -7,6 +7,7 @@ import useCollections from '../../hooks/useCollections'
 
 const Collections = ({
     styles,
+    handleClick,
     variant='carousel',
     ...props
   }) => {
@@ -30,12 +31,14 @@ const Collections = ({
         <CollectionCarousel
           loading={loading}
           collections={ collections }
+          handleClick={ handleClick }
         />
       }
       { variant == 'grid' &&
         <CollectionGrid
           loading={loading}
           collections={ collections }
+          handleClick={ handleClick }
         />
       }
     </Box> 
@@ -44,6 +47,7 @@ const Collections = ({
 
 Collections.propTypes = {
   styles: PropTypes.object,
+  handleClick: PropTypes.func,
   variant: PropTypes.oneOf(['carousel', 'grid'])
 }
 
