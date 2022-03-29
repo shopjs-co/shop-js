@@ -37,7 +37,9 @@ var Product = function Product(_ref) {
     sx: sx.root
   }, /*#__PURE__*/_react["default"].createElement(_material.Button, {
     sx: sx.button,
-    onClick: handleClick
+    onClick: handleClick ? function () {
+      return handleClick(collection);
+    } : null
   }, /*#__PURE__*/_react["default"].createElement(_Image["default"], {
     alt: product.title,
     layout: "fill",
@@ -68,6 +70,7 @@ var _default = Product;
 exports["default"] = _default;
 Product.propTypes = {
   styles: _propTypes["default"].object,
+  handleClick: _propTypes["default"].func,
   product: _propTypes["default"].object.isRequired
 };
 var sx = {

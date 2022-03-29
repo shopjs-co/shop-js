@@ -32,7 +32,8 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 var ProductCollection = function ProductCollection(_ref) {
-  var collectionHandle = _ref.collectionHandle,
+  var handleClick = _ref.handleClick,
+      collectionHandle = _ref.collectionHandle,
       _ref$perPage = _ref.perPage,
       perPage = _ref$perPage === void 0 ? 20 : _ref$perPage,
       _ref$variant = _ref.variant,
@@ -53,11 +54,13 @@ var ProductCollection = function ProductCollection(_ref) {
   }, variant == 'carousel' && /*#__PURE__*/_react["default"].createElement(_ProductCarousel["default"], {
     title: collection === null || collection === void 0 ? void 0 : collection.title,
     loading: loading,
-    products: products
+    products: products,
+    handleClick: handleClick
   }), variant == 'grid' && /*#__PURE__*/_react["default"].createElement(_ProductGrid["default"], {
     title: collection === null || collection === void 0 ? void 0 : collection.title,
     loading: loading,
-    products: products
+    products: products,
+    handleClick: handleClick
   }));
 };
 
@@ -66,6 +69,7 @@ ProductCollection.propTypes = {
   products: _propTypes["default"].array,
   variant: _propTypes["default"].oneOf(['carousel', 'grid']),
   query: _propTypes["default"].string,
+  handleClick: _propTypes["default"].func,
   styles: _propTypes["default"].object
 };
 var _default = ProductCollection;

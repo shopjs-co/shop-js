@@ -76,7 +76,8 @@ var ProductCarousel = function ProductCarousel(_ref) {
   }, products.map(function (product) {
     return /*#__PURE__*/_react["default"].createElement(_Product["default"], {
       key: product.id,
-      product: product
+      product: product,
+      handleClick: handleClick
     });
   })) : /*#__PURE__*/_react["default"].createElement(_material.Box, {
     display: "flex",
@@ -93,6 +94,7 @@ var ProductCarousel = function ProductCarousel(_ref) {
 ProductCarousel.propTypes = {
   products: _propTypes["default"].array,
   loading: _propTypes["default"].bool,
+  handleClick: _propTypes["default"].func,
   styles: _propTypes["default"].object,
   swipeable: _propTypes["default"].bool,
   draggable: _propTypes["default"].bool,

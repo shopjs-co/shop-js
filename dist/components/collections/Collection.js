@@ -35,7 +35,9 @@ var Collection = function Collection(_ref) {
     sx: sx.root
   }, /*#__PURE__*/_react["default"].createElement(_material.Button, {
     sx: sx.button,
-    onClick: handleClick
+    onClick: handleClick ? function () {
+      return handleClick(collection);
+    } : null
   }, /*#__PURE__*/_react["default"].createElement(_Image["default"], {
     layout: "fill",
     src: (collection === null || collection === void 0 ? void 0 : (_collection$image = collection.image) === null || _collection$image === void 0 ? void 0 : _collection$image.originalSrc) || _constants.EMPTY_IMAGE_URL,
@@ -52,6 +54,7 @@ var Collection = function Collection(_ref) {
 
 Collection.propTypes = {
   styles: _propTypes["default"].object,
+  handleClick: _propTypes["default"].func,
   collection: _propTypes["default"].object.isRequired
 };
 var _default = Collection;

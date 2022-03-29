@@ -15,7 +15,7 @@ var _Product = _interopRequireDefault(require("./Product"));
 
 var _ProductSkeleton = _interopRequireDefault(require("../skeletons/ProductSkeleton"));
 
-var _excluded = ["products", "loading", "xs", "sm", "md", "lg"];
+var _excluded = ["products", "loading", "handleClick", "xs", "sm", "md", "lg"];
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -38,6 +38,7 @@ function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) r
 var ProductGrid = function ProductGrid(_ref) {
   var products = _ref.products,
       loading = _ref.loading,
+      handleClick = _ref.handleClick,
       _ref$xs = _ref.xs,
       xs = _ref$xs === void 0 ? 12 : _ref$xs,
       _ref$sm = _ref.sm,
@@ -60,7 +61,8 @@ var ProductGrid = function ProductGrid(_ref) {
       lg: lg,
       key: product.id
     }, /*#__PURE__*/_react["default"].createElement(_Product["default"], {
-      product: product
+      product: product,
+      handleClick: handleClick
     }));
   }) : _toConsumableArray(Array(12)).map(function (_, i) {
     return /*#__PURE__*/_react["default"].createElement(_material.Grid, {
@@ -77,6 +79,7 @@ var ProductGrid = function ProductGrid(_ref) {
 ProductGrid.propTypes = {
   products: _propTypes["default"].array,
   loading: _propTypes["default"].bool,
+  handleClick: _propTypes["default"].func,
   xs: _propTypes["default"].number,
   sm: _propTypes["default"].number,
   md: _propTypes["default"].number,

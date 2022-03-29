@@ -23,7 +23,7 @@ var _CollectionSkeleton = _interopRequireDefault(require("../skeletons/Collectio
 
 var _reactMultiCarousel = _interopRequireDefault(require("react-multi-carousel"));
 
-var _excluded = ["collections", "loading", "autoPlay", "swipeable", "draggable", "showDots", "perPage"];
+var _excluded = ["collections", "loading", "handleClick", "autoPlay", "swipeable", "draggable", "showDots", "perPage"];
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -46,6 +46,7 @@ function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) r
 var CollectionCarousel = function CollectionCarousel(_ref) {
   var collections = _ref.collections,
       loading = _ref.loading,
+      handleClick = _ref.handleClick,
       _ref$autoPlay = _ref.autoPlay,
       autoPlay = _ref$autoPlay === void 0 ? false : _ref$autoPlay,
       _ref$swipeable = _ref.swipeable,
@@ -81,7 +82,8 @@ var CollectionCarousel = function CollectionCarousel(_ref) {
   }, collections.map(function (collection) {
     return /*#__PURE__*/_react["default"].createElement(_Collection["default"], {
       key: collection.id,
-      collection: collection
+      collection: collection,
+      handleClick: handleClick
     });
   })) : /*#__PURE__*/_react["default"].createElement(_material.Box, {
     display: "flex",
@@ -98,6 +100,7 @@ var CollectionCarousel = function CollectionCarousel(_ref) {
 CollectionCarousel.propTypes = {
   collections: _propTypes["default"].array,
   loading: _propTypes["default"].bool,
+  handleClick: _propTypes["default"].func,
   styles: _propTypes["default"].object,
   autoPlay: _propTypes["default"].bool,
   swipeable: _propTypes["default"].bool,

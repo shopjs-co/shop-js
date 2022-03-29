@@ -19,7 +19,7 @@ var _CollectionGrid = _interopRequireDefault(require("./CollectionGrid"));
 
 var _useCollections2 = _interopRequireDefault(require("../../hooks/useCollections"));
 
-var _excluded = ["styles", "variant"];
+var _excluded = ["styles", "handleClick", "variant"];
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -33,6 +33,7 @@ function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) r
 
 var Collections = function Collections(_ref) {
   var styles = _ref.styles,
+      handleClick = _ref.handleClick,
       _ref$variant = _ref.variant,
       variant = _ref$variant === void 0 ? 'carousel' : _ref$variant,
       props = _objectWithoutProperties(_ref, _excluded);
@@ -51,15 +52,18 @@ var Collections = function Collections(_ref) {
     variant: "h6"
   }, "Collections"), variant == 'carousel' && /*#__PURE__*/_react["default"].createElement(_CollectionCarousel["default"], {
     loading: loading,
-    collections: collections
+    collections: collections,
+    handleClick: handleClick
   }), variant == 'grid' && /*#__PURE__*/_react["default"].createElement(_CollectionGrid["default"], {
     loading: loading,
-    collections: collections
+    collections: collections,
+    handleClick: handleClick
   }));
 };
 
 Collections.propTypes = {
   styles: _propTypes["default"].object,
+  handleClick: _propTypes["default"].func,
   variant: _propTypes["default"].oneOf(['carousel', 'grid'])
 };
 var _default = Collections;
