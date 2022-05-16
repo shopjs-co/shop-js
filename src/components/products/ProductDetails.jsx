@@ -1,8 +1,4 @@
-import React, {
-  useState,
-  useEffect,
-  useRef
-} from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import { Box, Typography } from '@mui/material';
 import useVariants from '../../hooks/useVariants'
 import AddToCartButton from '../cart/AddToCartButton'

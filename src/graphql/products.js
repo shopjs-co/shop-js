@@ -35,6 +35,41 @@ export const ProductFragment = gql`
       name
       values
     }
+    sellingPlanGroups(first: 10) {
+      edges {
+        node {
+          name
+          sellingPlans(first: 10) {
+            edges {
+              node {
+                id
+                name   
+                description
+                priceAdjustments {      
+                  adjustmentValue {
+                    ... on SellingPlanFixedAmountPriceAdjustment {
+                      adjustmentAmount {
+                        amount                         
+                        currencyCode
+                      }
+                    }  
+                    ... on SellingPlanFixedPriceAdjustment {
+                      price {
+                        amount
+                        currencyCode
+                      }
+                    }   
+                    ... on SellingPlanPercentagePriceAdjustment {
+                      adjustmentPercentage
+                    }           
+                  }                      
+                }
+              }
+            }
+          }  
+        }
+      }
+    }   
     priceRange {
       minVariantPrice {
         amount
